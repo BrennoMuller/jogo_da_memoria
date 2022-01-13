@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo da memoria</title>
+</head>
+<body>
+<div class="body_container">
+    <header class="header">
+        <div class="op">
+        <h3 class="title">Jogo da memoria </h3>
+            <button class="op1">como jogar</button>
+            <button class="op1">cadastrar-se</button>
+            <button class="op1">Login</button>
+            <button class="toggle"><img src="img/menu-aberto.png"></button>
+        </div>
+    </header>
+
+    <div class="home">
+        <h1>Bem Vindo !!</h1>
+ 
+        <h3>Configurações de jogo</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velit nisi, vestibulum eu nunc non, congue vehicula ante. Proin dapibu</p>
+
+        <div class="tipo_tabela">
+            <button class="op2" id="4x4" onclick="selecionar(this)">4x4</button>
+            <button class="op2" id="6x6" onclick="selecionar(this)">6x6</button>
+            <button class="op2" id="8x8" onclick="selecionar(this)">8x8</button>
+            <button class="op2" id="10x10" onclick="selecionar(this)">10x10</button>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velit nisi, vestibulum eu nunc non, congue vehicula ante. Proin dapibu</p>
+
+        <div class="qtd_jogadores">
+            <button class="op2" id="qtd_1" onclick="selecionar_jogadores(this)">1</button>
+            <button class="op2" id="qtd_2" onclick="selecionar_jogadores(this)">2</button>
+            <button class="op2" id="qtd_3" onclick="selecionar_jogadores(this)">3</button>
+            <button class="op2" id="qtd_4" onclick="selecionar_jogadores(this)">4</button>
+        </div>
+
+        <div class="space_button">
+            <button class="jogar" type="submit" onclick="jogar()">Jogar</button> 
+            <button class="jogar">Jogar online</button>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+    
+        var tipo_tabela = null;
+        var qtd_jogadores = null;
+
+
+
+        function selecionar(button){
+
+            if(tipo_tabela == button.id){
+
+                button.style.backgroundColor = "white";
+                tipo_tabela = null;
+
+            }else if(tipo_tabela != button.id && tipo_tabela != null){
+
+                const doc = document.getElementsByTagName('button');
+
+                [].forEach.call(doc, function(docs) {
+                    if(docs.id == tipo_tabela){
+                        docs.style.backgroundColor = "white";
+                        button.style.backgroundColor = "rgba(0,212,255,1)";
+                        tipo_tabela = button.id;    
+                    }
+                })
+
+            }else{
+                button.style.backgroundColor = "rgba(0,212,255,1)";
+                tipo_tabela = button.id;
+            }
+
+            console.log(tipo_tabela);
+            
+        }
+
+
+        function selecionar_jogadores(button){
+
+            if(qtd_jogadores == button.id){
+
+                button.style.backgroundColor = "white";
+                qtd_jogadores = null;
+
+            }else if(qtd_jogadores != button.id && qtd_jogadores != null){
+
+                const doc = document.getElementsByTagName('button');
+
+                [].forEach.call(doc, function(docs) {
+                    if(docs.id == qtd_jogadores){
+                        docs.style.backgroundColor = "white";
+                        button.style.backgroundColor = "rgba(0,212,255,1)";
+                        qtd_jogadores = button.id;    
+                    }
+                })
+
+            }else{
+                button.style.backgroundColor = "rgba(0,212,255,1)";
+                qtd_jogadores = button.id;
+            }
+
+            console.log(qtd_jogadores);
+            
+        }
+
+
+
+
+        function jogar(){
+           if(tipo_tabela != null && qtd_jogadores != null){
+                window.location.href =("game.html");
+           }else if(tipo_tabela != null && qtd_jogadores == null){
+                alert("selecione a quantidade de jogadores");
+           }else if(tipo_tabela == null && qtd_jogadores != null){
+                alert("selecione o nivel de dificuldade");
+           }else{
+                alert("selecione o nivel de dificuldade e a quantidade de jogadores");
+           }
+        }
+
+
+    </script>
+
+</div>
+</body>
+</html>
