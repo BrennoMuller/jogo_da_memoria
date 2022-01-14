@@ -13,7 +13,7 @@
         <div class="op">
         <h3 class="title">Jogo da memoria </h3>
             <button class="op1">como jogar</button>
-            <button class="op1">cadastrar-se</button>
+            <button class="op1" id="cadastro" onclick="open_modal(this)">cadastrar-se</button>
             <button class="op1">Login</button>
             <button class="toggle"><img src="img/menu-aberto.png"></button>
         </div>
@@ -130,8 +130,33 @@
         }
 
 
-    </script>
 
+    </script>
+    
 </div>
+
+    <script src="main.js"></script>
+
+    <div class="modal" id="modal">
+        <div class="container_modal">
+            <h3>Cadastre-se</h3>
+            <form class="form_cadastro">
+                <label>nome</label>
+                <input type="text" name="nome" id="" label="nome" class="input_cadastro">
+                <label>email</label>
+                <input type="text" name="nome" id="" label="nome" class="input_cadastro">
+                <label>idade</label>
+                <input type="text" name="nome" id="" label="nome" class="input_cadastro">
+                <label>senha</label>
+                <input type="password" name="nome" id="" label="nome" class="input_cadastro">
+                <label>confirmar senha</label>
+                <input type="password" name="nome" id="" label="nome" class="input_cadastro">
+            </form>
+
+            <button class="button_modal">cadastrar-se</button>
+            <button class="button_modal">exit</button>
+        </div>
+    </div>
+
 </body>
 </html>
