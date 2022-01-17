@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Press+Start+2P&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+*{
+    margin: 0 0 0 0;
+}
+
+
+.body_container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%) no-repeat;
+}
+
+.container{
+  
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 0.2fr);
+    margin-top: 3%;
+    
+}
+
+.home{
+ 
+  padding: 30px;
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+.home h1{
+     font-family: 'Sigmar One', cursive;
+     color: rgba(9,9,121,1);
+     margin-left: 20px;
+}
+
+.home h3{
+     font-family: 'Sigmar One', cursive;
+     font-size: 20px;
+     color: rgba(9,9,121,1);
+     margin-left: 20px;
+     padding: 5px;
+     
+
+}
+
+.home p{  
+    margin: 20px;
+    text-indent: 3ch;
+    margin-left: 5px;
+    font-family: 'Nunito', sans-serif;
+    color:rgba(9,9,121,1);
+}
+
+
+.tipo_tabela{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tipo_tabela button{
+    padding: 10px;
+    background-color: white;
+    border: 1px solid rgba(9,9,121,2);
+    border-radius: 3px;
+    font-family: 'Nunito', sans-serif;
+    color:rgba(9,9,121,1);
+}
+
+.tipo_tabela button:hover{
+    background-color: rgba(0,212,255,0.2);
+}
+
+
+.qtd_jogadores{
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.qtd_jogadores button{
+    padding: 10px;
+    background-color: white;
+    border: 1px solid rgba(9,9,121,2);
+    border-radius: 3px;
+    font-family: 'Nunito', sans-serif;
+    color:rgba(9,9,121,1);
+}
+
+.qtd_jogadores button:hover{
+    background-color: rgba(0,212,255,0.2);
+}
+
+
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+
+.title{
+    color: rgba(9,9,121,1);
+    font-family: 'Sigmar One', cursive;
+    font-size: 35px;
+    margin-left: 5px;
+}
+
+.op{
+    display: grid;
+    grid-template-columns: auto .2fr .2fr .2fr;
+}
+
+.op1{
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    margin: 5px;
+    border: none;
+    background-color: white;
+    color:rgba(9,9,121,1);
+    transition: .2s;
+    float:right;
+}
+
+
+.toggle{
+    width: 40px;
+    height: 40px;
+    display: none;
+    border: none;
+    background-color: white;
+    color:rgba(9,9,121,1);
+    transition: .2s;
+    float:right;
+}
+
+.toggle img{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    float: right;
+}
+
+
+.tabela{
+    
+    display: grid;
+    grid-template-columns: repeat(5, 0.1fr);
+    text-align: center;
+    padding: 10px;
+  }
+
+
+@media (min-resolution: 2dppx){
+    .op1{
+        display: none;
+    }
+
+    .toggle{
+        display: flex;
+    }
+
+    .header{
+        height: 40px;
+    }
+
+    .title{
+        margin-left: 25px;
+        font-size: 25px;
+    }
+
+    .tabela{
+        margin-left: 0px;
+        grid-template-columns: repeat(2, .5fr);
+    }
+
+
+}
+
+
+@media (max-width: 840px){
+    .op1{
+        display: none;
+    }
+
+    .toggle{
+        display: flex;
+    }
+
+    .header{
+        height: 40px;
+    }
+
+    .title{
+        margin-left: 25px;
+        font-size: 25px;
+    }
+
+    .tabela{
+        margin-left: 0px;
+        grid-template-columns: repeat(3, .5fr);
+    }
+
+
+}
+
+.op1:hover{
+    color: rgba(0,212,255,1);
+}
+
+
+.space_button{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border-top: 1px dotted rgba(0,212,255,1);
+    display: flex;
+    justify-content: center;
+}
+
+.jogar{
+    padding: 10px;
+    background-color: rgba(9,9,121,1);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Sigmar One', cursive;
+    font-size: 20px;
+    color: white;
+    margin: 5px;
+}
+
+
+
+.card{
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    animation: anime_inicio 3s;
+    box-shadow: 4px;
+    padding: 5px;
+}
+
+.front, .back{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    
+}
+
+.front:hover{
+   border:2px solid blue;
+
+}
+
+.card:hover{
+    margin-top: -5px;
+    
+}
+
+.back img{
+    width: 100px;
+    height: 100px;
+}
+
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+
+/*animação inicio*/
+
+@keyframes pontos {
+    0%{
+        font-size: 20px;
+    }
+
+    50%{
+        font-size: 22px;
+    }
+
+    100%{
+        
+
+    }
+
+}
+
+.pontos{
+    
+}
+
+.remove{
+    display: none;
+}
+
+.tabela_pontos{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+}
+
+.capa{
+    background-image: url('img/frontcard\ \(2\).png'); 
+    width: 100px; 
+    height: 100px;
+    box-shadow: 4px;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.container_modal{
+    background-image:url('img/cadastro.png');
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+    height: 400px;
+    margin:auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+  
+}
+
+
+.container_modal h3{
+    font-family: 'Sigmar One', cursive;
+    font-size: 40px;
+    color: rgba(9,9,121,1);
+    margin-left: 20px;
+    padding: 5px;
+    
+
+}
+
+.form_cadastro{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+}
+
+.form_cadastro input{
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    border:solid 1px blue;
+
+}
+
+.form_cadastro label{
+    margin-top: 5px;
+}
+
+.button_modal{
+    width: 180px;
+    height: 30px;
+    font-size: 15px;
+    margin: 5px;
+    border: 2px solid blue;
+    border-radius: 8px;
+    background-color: white;
+    color:rgba(9,9,121,1);
+
+}
+
+.som{
+    display:flex;
+    flex-direction: column;
+}
+
+.som button{
+    background-color: white;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding: 20px;
+    font-size: 20px;
+    color:rgba(9,9,121,1);
+    border-radius: 5px;
+    border:none;
+
+}
+
+.som button:hover{
+    color:rgb(20, 20, 221);
+}
+
+.footer {
+    flex-shrink: 0;
+    background-color: white;
+    position: relative;
+    height: auto;
+    padding: 30px;
+    text-align: center;
+    color:rgb(20, 20, 221);;
+}
+
+
