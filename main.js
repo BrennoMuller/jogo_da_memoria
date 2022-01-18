@@ -111,7 +111,7 @@ function comparar_cards(card1_id , card2_id){
     if(card1_id  == card2_id){
         if(qual_jogador.value == 1){
             pontos_jogador1 += 1;
-            text_pontos_jogador1.innerHTML = "acertos jogador 1: " + pontos_jogador1;
+            text_pontos_jogador1.innerHTML = "jogador 1: " + pontos_jogador1;
             text_pontos_jogador1.style.animation = 'pontos 0.5s';
             cartas_viradas = 0;
             verificando_vencedor();
@@ -119,7 +119,7 @@ function comparar_cards(card1_id , card2_id){
     
         if(qual_jogador.value == 2){
             pontos_jogador2 += 1;
-            text_pontos_jogador2.innerHTML = "acertos jogador 1: " + pontos_jogador2;
+            text_pontos_jogador2.innerHTML = "jogador 1: " + pontos_jogador2;
             text_pontos_jogador2.style.animation = 'pontos 0.5s';
             cartas_viradas = 0;
             verificando_vencedor();
@@ -183,4 +183,84 @@ function open_modal(castro){
 
   
 
-  
+var tipo_tabela = null;
+var qtd_jogadores = null;
+
+
+
+function selecionar(button){
+
+    if(tipo_tabela == button.id){
+        button.style.backgroundColor = "white";
+        tipo_tabela = null;
+    }else if(tipo_tabela != button.id && tipo_tabela != null){
+        const doc = document.getElementsByTagName('button');
+        [].forEach.call(doc, function(docs) {
+            if(docs.id == tipo_tabela){
+                docs.style.backgroundColor = "white";
+            }
+        })
+
+        button.style.backgroundColor = "rgba(0,212,255,1)";
+        tipo_tabela = button.id;    
+    }else{
+        button.style.backgroundColor = "rgba(0,212,255,1)";
+        tipo_tabela = button.id;
+    }
+
+    console.log(tipo_tabela);
+    
+}
+
+
+function selecionar_jogadores(button){
+
+    if(qtd_jogadores == button.id){
+
+        button.style.backgroundColor = "white";
+        qtd_jogadores = null;
+
+    }else if(qtd_jogadores != button.id && qtd_jogadores != null){
+
+        const doc = document.getElementsByTagName('button');
+
+        [].forEach.call(doc, function(docs) {
+            if(docs.id == qtd_jogadores){
+                docs.style.backgroundColor = "white";
+                button.style.backgroundColor = "rgba(0,212,255,1)";
+                qtd_jogadores = button.id;    
+            }
+        })
+
+    }else{
+        button.style.backgroundColor = "rgba(0,212,255,1)";
+        qtd_jogadores = button.id;
+    }
+
+    console.log(qtd_jogadores);
+    
+}
+
+
+
+
+function jogar(){
+   if(tipo_tabela != null && qtd_jogadores != null){
+      if(tipo_tabela == 'facil'){
+        window.location.href = ("game_facil.html");
+      }else if(tipo_tabela == 'medio'){
+        window.location.href = ("game_medio.html");
+      }else if(tipo_tabela == 'difícil'){
+        window.location.href = ("game_dificil.html");
+      }else if(tipo_tabela == 'super_dificil'){
+        window.location.href = ("game_super_dificil.html");
+      }
+   }else if(tipo_tabela != null && qtd_jogadores == null){
+        alert("selecione a quantidade de jogadores");
+   }else if(tipo_tabela == null && qtd_jogadores != null){
+        alert("selecione o nivel de dificuldade");
+   }else{
+        alert("selecione o nivel de dificuldade e a quantidade de jogadores");
+   }
+}
+
