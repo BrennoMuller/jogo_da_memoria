@@ -1,13 +1,9 @@
 # jogo_da_memoria
 jogo da memoria implementado com HTML, CSS E JS
 
+![Captura de tela de 2022-01-18 12-35-09](https://user-images.githubusercontent.com/82506300/149969092-76358934-1bcf-457b-a76b-9537ab08f73f.png)
 
-
-![Captura de tela de 2022-01-14 15-19-38](https://user-images.githubusercontent.com/82506300/149566426-3ac5f266-e721-464b-9c04-ba2038f73a9e.png)
-
-![Captura de tela de 2022-01-14 15-19-52](https://user-images.githubusercontent.com/82506300/149566168-875bc537-9b93-4796-88d0-3e1ecbf0a0d1.png)
-
-![Captura de tela de 2022-01-14 15-20-32](https://user-images.githubusercontent.com/82506300/149566177-ee849367-aaac-466d-9c79-e8052f3a8960.png)
+![Captura de tela de 2022-01-18 12-35-21](https://user-images.githubusercontent.com/82506300/149969107-62e7bd0a-d280-49b1-a89b-99fc0ae972af.png)
 
 ![Captura de tela de 2022-01-12 22-27-39](https://user-images.githubusercontent.com/82506300/149566333-69129b8c-54b9-42b7-ace0-696df9578b24.png)
 
